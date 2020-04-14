@@ -1,24 +1,92 @@
 //out: ../css/index.css, compress: false, sourceMap: false
 
-// Is this working?
+// Is this working? - CSS RESET
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -26,25 +94,44 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -52,10 +139,126 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+	height: 100%;
+	font-size: 62.5%;
 }
 
+// ---------- MY CSS BEGINS HERE -----------
+
+//VARIABLES
+//COLORS
+@black: black;
+@gray: gray;
+@blue: dodgerblue;
+@light-blue: lighten(@blue, 10%);
+@dark-blue: darken(@blue, 20%);
+@white: white;
+@complement: spin(@blue, 180);
+
+//GRADIENT
+
+.gradient (@color-1, @color-2) {
+	background-image: linear-gradient(@color-1, @color-2);
+	
+	&:hover {
+		background-image: linear-gradient(spin(@color-1, 180), spin(@color-2, 180));
+	}
+	&:visited {
+		background-image: linear-gradient(@color-2, @color-1);
+	}
+	
+}
+
+//gradient
+
+//STYLES
+.header-style(@weight) {
+	color: @black;
+	font-family: 'Playfair Display', serif;
+	font-weight: @weight;
+}
+
+.body-style {
+	font-size: 1.8rem;
+	font-family: 'Muli', sans-serif;
+	color: @gray;
+	font-weight: 400;
+}
+
+.button-style {
+	width: 45%;
+	height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	padding: 10px;
+	//min-width: 20vw;
+	//min-height: ;
+	border-radius: 20px;
+	color: @white;
+	font-family: 'Muli', serif;
+	font-size: 1.4rem;
+	font-weight: 600;
+	
+
+	// &:active{
+	// 	background-image: linear-gradient(red, orange);
+	// }
+	&:visited {
+		background-image: linear-gradient(red, orange);
+	}
+}
+
+.simple-border {
+	border: 1px solid darkgrey;
+}
+
+//MIXINS
+
+
+
+
+// ------ LESS-------
+
+.container {
+	margin: 0 auto;
+	.body-style();
+
+	.nav {
+		.body-style();
+		text-decoration: none;
+	}
+
+	h1 {
+		.header-style(700);
+		font-size: 4rem;
+	}
+
+	h3 {
+		.header-style(400);
+		font-size: 2.4rem;
+	}
+
+	.header {
+		width: 80%;
+		height: 30vh;
+		.simple-border();
+
+		a div {
+			.button-style();
+			.simple-border();
+			transition: background-image ease-in-out 2s;
+			transition-delay: 1s;
+			.gradient(@blue, @dark-blue);
+
+		
+		}
+
+		
+	}
+
+}

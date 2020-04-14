@@ -133,4 +133,85 @@ table {
 html,
 body {
   height: 100%;
+  font-size: 62.5%;
+}
+.body-style {
+  font-size: 1.8rem;
+  font-family: 'Muli', sans-serif;
+  color: gray;
+  font-weight: 400;
+}
+.button-style {
+  width: 45%;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+  font-family: 'Muli', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.button-style:visited {
+  background-image: linear-gradient(red, orange);
+}
+.simple-border {
+  border: 1px solid darkgrey;
+}
+.container {
+  margin: 0 auto;
+  font-size: 1.8rem;
+  font-family: 'Muli', sans-serif;
+  color: gray;
+  font-weight: 400;
+}
+.container .nav {
+  font-size: 1.8rem;
+  font-family: 'Muli', sans-serif;
+  color: gray;
+  font-weight: 400;
+  text-decoration: none;
+}
+.container h1 {
+  color: black;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 4rem;
+}
+.container h3 {
+  color: black;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+}
+.container .header {
+  width: 80%;
+  height: 30vh;
+  border: 1px solid darkgrey;
+}
+.container .header a div {
+  width: 45%;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+  font-family: 'Muli', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: 1px solid darkgrey;
+  transition: background-image ease-in-out 2s;
+  transition-delay: 1s;
+  background-image: linear-gradient(dodgerblue, #005db7);
+}
+.container .header a div:visited {
+  background-image: linear-gradient(red, orange);
+}
+.container .header a div:hover {
+  background-image: linear-gradient(#ff8d1e, #b75a00);
+}
+.container .header a div:visited {
+  background-image: linear-gradient(#005db7, dodgerblue);
 }

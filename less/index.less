@@ -150,7 +150,12 @@ body {
 
 // ---------- MY CSS BEGINS HERE -----------
 
-//VARIABLES
+//-----VARIABLES------
+
+//MEDIA QUERIES
+@phone: ~"only screen and (max-width: 600px)";
+@tablet: ~"only screen and (max-width: 900px)";
+
 //COLORS
 @black: black;
 @gray: gray;
@@ -159,24 +164,32 @@ body {
 @dark-blue: darken(@blue, 20%);
 @white: white;
 @complement: spin(@blue, 180);
+//------End of Variables--------
+
+
+//----------MIXINS-----------
 
 //GRADIENT
-
 .gradient (@color-1, @color-2) {
 	background-image: linear-gradient(@color-1, @color-2);
-	
+
 	&:hover {
 		background-image: linear-gradient(spin(@color-1, 180), spin(@color-2, 180));
 	}
-	&:visited {
-		background-image: linear-gradient(@color-2, @color-1);
+
+	&:active {
+		background-image: linear-gradient(darken(spin(@color-1, 180), 10%), darken(spin(@color-2, 180), 10%));
 	}
-	
+
+	&:visited {
+		background-image: linear-gradient(spin(@color-1, -(360/3)), spin(@color-2, -(360/3)));
+	}
+
 }
 
-//gradient
+//End of Gradient
 
-//STYLES
+//HEADER STYLES
 .header-style(@weight) {
 	color: @black;
 	font-family: 'Playfair Display', serif;
@@ -188,36 +201,60 @@ body {
 	font-family: 'Muli', sans-serif;
 	color: @gray;
 	font-weight: 400;
+	line-height: 4rem;
 }
 
+.h1 {
+	.header-style(700);
+	font-size: 4rem;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.h3 {
+	.header-style(400);
+	font-size: 2.4rem;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+//BUTTON STYLES
 .button-style {
-	width: 45%;
-	height: 40px;
-	text-align: center;
-	vertical-align: middle;
-	padding: 10px;
-	//min-width: 20vw;
-	//min-height: ;
-	border-radius: 20px;
-	color: @white;
-	font-family: 'Muli', serif;
-	font-size: 1.4rem;
+	font-family: 'Muli', sans-serif;
+	font-size: 1.8rem;
 	font-weight: 600;
-	
-
-	// &:active{
-	// 	background-image: linear-gradient(red, orange);
-	// }
-	&:visited {
-		background-image: linear-gradient(red, orange);
-	}
+	color: @white;
+	line-height: 1.8rem;
+	// width: 45%;
+	// height: 50px;
+	text-align: center;
+	//vertical-align: middle;
+	padding: 15px;
+	border-radius: 30px;
+	width: 20vw;
+	min-width: 225px;
 }
 
+//BORDER STYLES
 .simple-border {
 	border: 1px solid darkgrey;
 }
 
-//MIXINS
+//IMAGE STYLES
+.basic-image {
+	border-radius: 50%;
+	border: 5px solid lightgray;
+}
+
+//FLEX DISPLAY
+.flex {
+	display: flex;
+}
+
+
+
+//End of MIXINS
 
 
 
@@ -226,39 +263,133 @@ body {
 
 .container {
 	margin: 0 auto;
+	width: 80%;
+	//padding: ;
 	.body-style();
 
 	.nav {
-		.body-style();
-		text-decoration: none;
-	}
+		.flex();
+		justify-content: flex-end;
 
-	h1 {
-		.header-style(700);
-		font-size: 4rem;
-	}
+		a {
+			.body-style();
+			text-decoration: none;
+			margin: 20px 2.5vw 20px;
+			flex-basis: 5vw;
 
-	h3 {
-		.header-style(400);
-		font-size: 2.4rem;
-	}
+			//justify-content: flex-end;
+			&:hover {
+				color: spin(@light-blue, 180);
+			}
 
-	.header {
-		width: 80%;
-		height: 30vh;
-		.simple-border();
+			&:active {
+				color: darken(spin(@light-blue, 180), 15%);
+			}
 
-		a div {
-			.button-style();
-			.simple-border();
-			transition: background-image ease-in-out 2s;
-			transition-delay: 1s;
-			.gradient(@blue, @dark-blue);
-
-		
+			&:visited {
+				color: @blue;
+			}
 		}
 
-		
+
+
 	}
 
+	.top-section {
+
+		.flex();
+
+		h1 {
+			.h1();
+		}
+
+		h3 {
+			.h3();
+		}
+
+		margin: 20px 0px;
+		padding: 20px 20px;
+		width: 80vw;
+		height: fit-content;
+		//.simple-border();
+
+		.header {
+			//padding: 0px 20px 20px 0px;
+			//margin: 20px 20px 20px 0px;
+			width: fit-content;
+			height: fit-content;
+
+			.profile-img {
+				.basic-image();
+				//width: 50%;
+				// transition:  ease-in-out 2s;
+				// transition-delay: 1s;
+			}
+
+			.byline {
+				margin: 20px 0px;
+				padding: 20px 0px;
+				
+			}
+
+			hr{
+				background-color: @gray;
+				width: 80vw;
+			}
+
+			.button {
+				.button-style();
+				//.simple-border();
+				.gradient(@blue, @dark-blue);
+			
+			}
+
+			// Button
+		}
+
+		//Header
+	}
+
+	//top-section
+
+	.mid-section {
+		.flex();
+		flex-direction: row;
+
+		@media @phone {
+			flex-direction: column;
+		}
+
+		padding: 20px;
+
+		.about-section {
+			flex: 1;
+			margin-right: 30px;
+			h3 {
+				.h3();
+			}
+
+		}
+
+		.proficiencies {
+			flex: 1;
+
+			h3 {
+				.h3();
+				margin: 20px;
+			}
+			
+			.proficiencies-list {
+				.box {
+					padding: 2rem;
+					.simple-border();
+				}
+			}
+		}
+
+	}
+
+	//mid-section
 }
+
+//Container

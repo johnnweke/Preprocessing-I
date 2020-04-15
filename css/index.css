@@ -171,6 +171,7 @@ body {
   width: 20vw;
   min-width: 225px;
   background-image: linear-gradient(#51a9ff, #ffc184);
+  cursor: pointer;
 }
 .button-style:hover {
   background-image: linear-gradient(#ffa751, #84c2ff);
@@ -192,8 +193,9 @@ body {
   text-align: center;
   justify-content: space-around;
   align-items: center;
+  border-radius: 10px;
   min-width: 200px;
-  min-height: 100px;
+  min-height: 110px;
   width: 20vw;
   height: 15vh;
   padding: 15px;
@@ -317,6 +319,9 @@ body {
   height: 4px;
   border: none;
 }
+.container .top-section .header a {
+  text-decoration: none;
+}
 .container .top-section .header .button {
   font-family: 'Muli', sans-serif;
   font-size: 1.8rem;
@@ -330,6 +335,7 @@ body {
   width: 20vw;
   min-width: 225px;
   background-image: linear-gradient(#51a9ff, #ffc184);
+  cursor: pointer;
   background-image: linear-gradient(dodgerblue, #005db7);
 }
 .container .top-section .header .button:hover {
@@ -409,6 +415,7 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 .container .projects-section .card-container div {
   display: flex;
@@ -421,8 +428,9 @@ body {
   text-align: center;
   justify-content: space-around;
   align-items: center;
+  border-radius: 10px;
   min-width: 200px;
-  min-height: 100px;
+  min-height: 110px;
   width: 20vw;
   height: 15vh;
   padding: 15px;
@@ -448,4 +456,72 @@ body {
 }
 .container .projects-section .project-1 {
   color: white;
+}
+.container .contact-section {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.container .contact-section hr {
+  background-color: #e6e6e6;
+  width: 80vw;
+  height: 4px;
+  border: none;
+}
+.container .contact-section h3 {
+  color: black;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.container .contact-section input[type=text],
+.container .contact-section select,
+.container .contact-section textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0px;
+  border: 1px solid darkgrey;
+  border-radius: 10px;
+}
+.container .contact-section input[type=text]:placeholder-shown,
+.container .contact-section select:placeholder-shown,
+.container .contact-section textarea:placeholder-shown {
+  font-size: 1.4rem;
+  font-family: 'Muli', sans-serif;
+}
+.container .contact-section input[type=submit] {
+  font-family: 'Muli', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+  line-height: 1.8rem;
+  text-shadow: 2px 2px 5px 0.1 black;
+  text-align: center;
+  padding: 15px;
+  border-radius: 30px;
+  width: 20vw;
+  min-width: 225px;
+  background-image: linear-gradient(#51a9ff, #ffc184);
+  cursor: pointer;
+  background-image: linear-gradient(dodgerblue, #005db7);
+}
+.container .contact-section input[type=submit]:hover {
+  background-image: linear-gradient(#ffa751, #84c2ff);
+}
+.container .contact-section input[type=submit]:active {
+  background-image: linear-gradient(#ff8d1e, #51a9ff);
+}
+.container .contact-section input[type=submit]:visited {
+  background-image: linear-gradient(#a9ff51, #c184ff);
+}
+.container .contact-section input[type=submit]:hover {
+  background-image: linear-gradient(#ff8d1e, #b75a00);
+}
+.container .contact-section input[type=submit]:active {
+  background-image: linear-gradient(#ea7300, #844100);
+}
+.container .contact-section input[type=submit]:visited {
+  background-image: linear-gradient(#90ff1e, #5db700);
 }

@@ -906,7 +906,7 @@ body {
     width: 80vw;
   }
 }
-footer {
+.footer {
   text-align: center;
   font-size: 1.8rem;
   font-family: 'Muli', sans-serif;

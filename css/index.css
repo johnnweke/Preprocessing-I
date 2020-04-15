@@ -408,6 +408,7 @@ body {
   font-size: 2.4rem;
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-left: 20px;
 }
 .container .projects-section .card-container {
   display: flex;
@@ -457,6 +458,12 @@ body {
 .container .projects-section .project-1 {
   color: white;
 }
+.container .work-history hr {
+  background-color: #e6e6e6;
+  width: 80vw;
+  height: 4px;
+  border: none;
+}
 .container .contact-section {
   margin-bottom: 20px;
   display: flex;
@@ -479,6 +486,7 @@ body {
 .container .contact-section input[type=text],
 .container .contact-section select,
 .container .contact-section textarea {
+  max-width: 900px;
   width: 100%;
   padding: 12px;
   margin: 10px 0px;

@@ -30,11 +30,13 @@
           alt="John Nweke Profile Image">
         <h1>John Nweke</h1>
         <h3>Web Developer</h3>
-        <hr>
+
         <div class="byline">Thanks for visiting! I'm available for work. Contact me below.</div>
         <a href="#contact">
           <div class="button">Let's Work Together</div>
         </a>
+
+        <hr>
       </header>
       <!--Header Image-->
     </div>
@@ -45,15 +47,17 @@
     <div class="mid-section">
       <section class="about-section" id="about">
         <h3>About Me</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis distinctio totam nulla, maxime
-          consectetur neque alias doloribus tenetur voluptatem dolorem quas molestias magnam. Quia hic quasi mollitia.
-          Temporibus, sed magnam.</p>
+        <p>John is on a mission to help institutions of education and government achieve more results with fewer (and better) resources.
+          Trained as a graphic and web designer, he has a unique 8-year background that spans graphic design, user
+          experience design, event planning, marketing, advertising, data management and web development.</p>
         <br>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit ratione explicabo minus incidunt suscipit,
-          soluta voluptate! Iusto, error itaque, sint sapiente, commodi amet officia sunt dolores enim ratione eaque?
-          Magnam!</p>
+        <p>He pioneered the graphic design and computer science program at the Arrow Center for Education (a high school
+          for children with educational and emotional challenges) in 2015. Additionally, he has had a few speaking
+          engagements in which he led UX and design workshops for non-profit organizations and web developer groups.
+        </p>
+        <br>
+        <p>Currently, he is a Data Manager at the University of Maryland, Baltimore County.</p>
 
-        <hr class="hidden-on-desktop">
       </section>
 
       <!---About-->
@@ -68,9 +72,11 @@
         </div>
 
       </section>
-      <!--Proficiencies-->
+      <!--End of Proficiencies-->
+
     </div>
-    <!--Mid-Section-->
+    <!--End of Mid-Section-->
+    <hr class="midsection-divider">
 
     <!-- ### PROJECTS ### -->
     <section class="projects-section" id="projects">
@@ -86,43 +92,66 @@
     </section>
     <!--End of Projects-->
 
-  <!-- ### WORK HISTORY ### -->
-  <section class="work-history">
-    <hr>
-    <h3 class="work-history-title">Work History</h3>
+    <!-- ### WORK HISTORY ### -->
+    <section class="work-history">
+      <hr>
+      <h3 class="work-history-title">Work History</h3>
 
-    <div class="work-history-container">
-      <div class="work-history-head">
-        <div class="years">Yrs</div>
-        <div class="company">Company</div>
-        <div class="job-title">Job Title</div>
-        <div class="tech-used">Software Used</div>
+      <!--Work History Hidden on Mobile, Shows on Desktop-->
+      <div class="work-history-container hidden-on-mobile">
+        <div class="work-history-head">
+          <div class="years">Yrs</div>
+          <div class="company">Company</div>
+          <div class="job-title">Job Title</div>
+          <div class="software-used">Software Used</div>
+        </div>
+
+        <div class="umbc-head">
+          <div class="umbc-years">1</div>
+          <div class="umbc-company">UMBC</div>
+          <div class="umbc-job-title">Data Manager</div>
+          <div class="umbc-software-used">Excel, Tableau</div>
+        </div>
+
+        <div class="johns-hopkins-head">
+          <div class="johns-hopkins-years">2</div>
+          <div class="johns-hopkins-company">The Johns Hopkins University</div>
+          <div class="johns-hopkins-job-title">Digital Media Specialist</div>
+          <div class="johns-hopkins-software-used">Adobe Creative Suite</div>
+        </div>
+
+        <div class="arrow-head">
+          <div class="arrow-years">2</div>
+          <div class="arrow-company">Arrow Center for Education</div>
+          <div class="arrow-job-title">Software Teacher, Tech Support</div>
+          <div class="arrow-software-used">Adobe Creative Suite, Excel</div>
+        </div>
       </div>
+      <!--End of Work History Hidden on Mobile, Shows on Desktop-->
 
-      <div class="umbc-head">
-        <div class="years umbc">1</div>
-        <div class="company umbc">UMBC</div>
-        <div class="job-title umbc">Data Manager</div>
-        <div class="tech-used umbc">Excel, Tableau</div>
+      <!--Work History Hidden on Desktop, Shows on Mobile-->
+      <div class="work-history-container-2 hidden-on-desktop">
+        <div class="work-history-head-2">
+          <div class="umbc-work-history">
+            <p><span>Data Manager</span> at <span>University of Maryland, Baltimore County</span> for <span>1
+                year,</span> using <span>Excel</span> and <span>Tableau</span></p>
+          </div>
+          <div class="johns-hopkins-work-history">
+            <p><span>Digital Media Specialist</span> at <span>The Johns Hopkins University</span> for <span>2
+                years,</span> using and teaching <span>Adobe Creative Suite</span></p>
+          </div>
+          <div class="arrow-work-history">
+            <p><span>Software Educator</span> and <span>Tech Specialist</span> at <span>The Arrow Center for Education</span> for
+              <span>2 years,</span> using and Teaching <span>Adobe Creative Suite and Microsoft Excel</span></p>
+          </div>
+        </div>
       </div>
+      <!--End of Work History Hidden on Desktop, Shows on Mobile-->
 
-      <div class="john-hopkins-head">
-        <div class="years johns-hopkins">2</div>
-        <div class="company johns-hopkins">Johns Hopkins University</div>
-        <div class="job-title johns-hopkins">Digital Media Specialist</div>
-        <div class="tech-used johns-hopkins">Adobe Creative Suite</div>
-      </div>
+      <!--End of Work History Container-->
 
-      <div class="arrow-head">
-        <div class="years arrow">2</div>
-        <div class="company arrow">Arrow Center for Education</div>
-        <div class="job-title arrow">Software Teacher, Tech Support</div>
-        <div class="tech-used arrow">Adobe Creative Suite, Excel</div>
-      </div>
-    </div> <!--End of Work History Container-->
-
-  </section>
-  <!-- End of Work History  -->
+    </section>
+    <!-- End of Work History  -->
 
 
     <!-- ### CONTACT SECTION ### -->
@@ -130,20 +159,22 @@
     <section class="contact-section" id="contact">
       <hr>
 
-      <h3 class="contact-section-title">I'd love to hear from you!</h3>
+      <h3 class="contact-section-title">Let's chat</h3>
       <!-- Form -->
       <form action="action_page.js">
 
         <div class="row name-div">
           <!-- <label for="fname">First Name</label> -->
-          <input type="text" id="fullname" name="fullname" placeholder="What do you like to be called?">
+          <input type="text" id="fullname" name="fullname" placeholder="Your Name...">
         </div>
 
         <div class="row email-div">
-          <input type="text" id="email" name="emailaddress" placeholder="What's your email?">
+          <input type="text" id="email" name="emailaddress" placeholder="Your email...">
         </div>
         <div class="row continent-div">
-          <label for="continent">What Continent are you on?</label>
+          <div class="select-label">
+            <label for="continent">What Continent are you on?</label>
+          </div>
           <select name="continent" id="continent">
             <option value="africa">Africa</option>
             <option value="australia">Australia</option>
@@ -154,7 +185,7 @@
           </select>
         </div>
         <div class="row subject">
-          <textarea name="subject" id="subject" cols="70" rows="10" placeholder="Type your thoughts here..."></textarea>
+          <textarea name="subject" id="subject" cols="70" rows="8" placeholder="Your thoughts here..."></textarea>
         </div>
         <div class="row submit">
           <input type="submit" value="Send">
